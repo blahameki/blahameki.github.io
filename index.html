@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Czégény Kornél Portfólió</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 0.75rem;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            width: calc(33.333% - 2rem);
+            box-sizing: border-box;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid #ddd;
+        }
+        .contact-form textarea {
+            width: 100%;
+            height: 200px; /* Megnövelt magasság */
+            resize: vertical; /* Engedélyezi a felhasználóknak, hogy függőlegesen átméretezzék a dobozt */
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+            }
+            .project {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>This is my Portfolio</h1>
+    <header>
+        <h1>Czégény Kornél portfólió</h1>
+    </header>
+
+    <nav>
+        <a href="#projects">Projektek</a>
+        <a href="#about">Rólam</a>
+        <a href="#contact">Kapcsolat</a>
+    </nav>
+
+    <div class="container">
+        <section id="projects">
+            <h2>Projektek</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>PacMan (Java)</h3>
+                    <p>Harmadik féléves projektem a klasszikus PacMan játék elkészítése. 
+                        A pálya, szellemek, PacMan grafikája adott volt, de a játékmenet lefejlesztését én csináltam.</p>
+                </div>
+                <div class="project">
+                    <h3>Ruharaktár (C, C++, Java)</h3>
+                    <p>Ezt a projektemet 3 féléven keresztül újra és újra lefejlesztettem 0-ról, 3 különböző nyelven. A program célja egy adatbázis 
+                        kezelése OO módon, mely a ruharaktárban tárolt jelmezekkel hajt végre különböző műveleteket. A programot a közeljövőben 
+                        implementációra kész állapotban szeretném implementálni egy művészeti iskolában.</p>
+                </div>
+                <div class="project">
+                    <h3>Spaceship</h3>
+                    <p>Szintén harmadik féléves projektem egy egyszerű félkész állapotó Spaceship játék tesztelése, majd javítása, kiegészítése.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Rólam</h2>
+            <p>
+                Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C,
+                C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni.
+                Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Kapcsolat</h2>
+            <form class="contact-form" action="send_email.php" method="post">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Küldés</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Czégény Kornél. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
