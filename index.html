@@ -51,15 +51,33 @@
             width: calc(33.333% - 2rem);
             box-sizing: border-box;
         }
-        .contact-form {
+        .contact-info {
             background: #fff;
             padding: 2rem;
             border: 1px solid #ddd;
+            margin-top: 2rem;
         }
-        .contact-form textarea {
-            width: 100%;
-            height: 200px; /* Megnövelt magasság */
-            resize: vertical; /* Engedélyezi a felhasználóknak, hogy függőlegesen átméretezzék a dobozt */
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        .contact-info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
         }
         footer {
             text-align: center;
@@ -74,6 +92,10 @@
             }
             .project {
                 width: 100%;
+            }
+            .about-section {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
         @media (max-width: 480px) {
@@ -90,12 +112,6 @@
     <header>
         <h1>Czégény Kornél portfólió</h1>
     </header>
-
-    <nav>
-        <a href="#projects">Projektek</a>
-        <a href="#about">Rólam</a>
-        <a href="#contact">Kapcsolat</a>
-    </nav>
 
     <div class="container">
         <section id="projects">
@@ -121,24 +137,22 @@
 
         <section id="about">
             <h2>Rólam</h2>
-            <p>
-                Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C,
-                C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni.
-                Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.
-            </p>
+            <div class="about-section">
+                <img src="profil.jpg" alt="Czégény Kornél profilkép" class="profile-img">
+                <p>
+                    Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C,
+                    C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni.
+                    Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.
+                </p>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Kapcsolat</h2>
-            <form class="contact-form" action="send_email.php" method="post">
-                <label for="name">Név:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Üzenet:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Küldés</button>
-            </form>
+        <section id="contact" class="contact-info">
+            <h2>Elérhetőségek</h2>
+            <p>Telefonszám: +36307033370</p>
+            <p>Email: <a href="mailto:czegeny03@gmail.com">czegeny03@gmail.com</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/kornel.czegeny" target="_blank">https://www.facebook.com/kornel.czegeny</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/" target="_blank">https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/</a></p>
         </section>
     </div>
 
