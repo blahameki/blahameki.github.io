@@ -5,170 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Czégény Kornél Portfólió</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-        }
-        nav a {
-            color: #fff;
-            padding: 0.75rem;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-        nav a:hover {
-            background: #555;
-        }
-        .container {
-            padding: 2rem;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .project {
-            background: #fff;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            width: calc(33.333% - 2rem);
-            box-sizing: border-box;
-        }
-        .contact-info {
-            background: #fff;
-            padding: 2rem;
-            border: 1px solid #ddd;
-            margin-top: 2rem;
-        }
-        .contact-info p {
-            margin: 0.5rem 0;
-        }
-        .contact-info a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .about-section {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ddd;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
-            width: 100%;
-        }
-        @media (max-width: 768px) {
-            .projects {
-                flex-direction: column;
-            }
-            .project {
-                width: 100%;
-            }
-            .about-section {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Czégény Kornél portfólió</h1>
+    <header class="site-header">
+        <h1>Czégény Kornél Portfólió</h1>
+        <nav class="site-nav">
+            <a href="#projects">Projektek</a>
+            <a href="#about">Rólam</a>
+            <a href="#contact">Elérhetőségek</a>
+        </nav>
+        <button class="menu-toggle">☰</button>
     </header>
 
-    <div class="container">
-        <section id="projects">
+    <main class="main-content">
+        <section id="projects" class="projects-section">
             <h2>Projektek</h2>
-            <div class="projects">
-                <div class="project">
+            <div class="projects-grid">
+                <article class="project-card">
                     <h3>PacMan (Java)</h3>
-                    <p>Harmadik féléves projektem a klasszikus PacMan játék elkészítése. 
-                        A pálya, szellemek, PacMan grafikája adott volt, de a játékmenet lefejlesztését én csináltam.</p>
-                </div>
-                <div class="project">
+                    <p>Harmadik féléves projektem a klasszikus PacMan játék elkészítése. A pálya, szellemek, PacMan grafikája adott volt, de a játékmenet lefejlesztését én csináltam.</p>
+                </article>
+                <article class="project-card">
                     <h3>Ruharaktár (C, C++, Java)</h3>
-                    <p>Ezt a projektemet 3 féléven keresztül újra és újra lefejlesztettem 0-ról, 3 különböző nyelven. A program célja egy adatbázis 
-                        kezelése OO módon, mely a ruharaktárban tárolt jelmezekkel hajt végre különböző műveleteket. A programot a közeljövőben 
-                        implementációra kész állapotban szeretném implementálni egy művészeti iskolában.</p>
-                </div>
-                <div class="project">
+                    <p>Ezt a projektemet 3 féléven keresztül újra és újra lefejlesztettem 0-ról, 3 különböző nyelven. A program célja egy adatbázis kezelése OO módon, mely a ruharaktárban tárolt jelmezekkel hajt végre különböző műveleteket. A programot a közeljövőben implementációra kész állapotban szeretném implementálni egy művészeti iskolában.</p>
+                </article>
+                <article class="project-card">
                     <h3>Spaceship</h3>
                     <p>Szintén harmadik féléves projektem egy egyszerű félkész állapotó Spaceship játék tesztelése, majd javítása, kiegészítése.</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="about-section">
             <h2>Rólam</h2>
-            <div class="about-section">
+            <div class="about-content">
                 <img src="profil.jpg" alt="Czégény Kornél profilkép" class="profile-img">
-                <p>
-                    Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C,
-                    C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni.
-                    Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.
-                </p>
+                <p>Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C, C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni. Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.</p>
             </div>
         </section>
 
-        <section id="contact" class="contact-info">
+        <section id="contact" class="contact-section">
             <h2>Elérhetőségek</h2>
-            <p>Telefonszám: +36307033370</p>
-            <p>Email: <a href="mailto:czegeny03@gmail.com">czegeny03@gmail.com</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/kornel.czegeny" target="_blank">https://www.facebook.com/kornel.czegeny</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/" target="_blank">https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/</a></p>
+            <ul class="contact-info">
+                <li>Telefonszám: +36307033370</li>
+                <li>Email: <a href="mailto:czegeny03@gmail.com">czegeny03@gmail.com</a></li>
+                <li>Facebook: <a href="https://www.facebook.com/kornel.czegeny" target="_blank">facebook.com/kornel.czegeny</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/" target="_blank">linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny</a></li>
+            </ul>
         </section>
-    </div>
+    </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2024 Czégény Kornél. Minden jog fenntartva.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
