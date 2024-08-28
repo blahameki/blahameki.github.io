@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Czégény Kornél Portfólió</title>
+    <title>Kornél Czégény Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
-        <h1>Czégény Kornél <br> Portfólió</h1>
+        <h1>Kornél Czégény <br> Portfolio</h1>
     </header>
 
     <div class="main-layout">
         <!-- Profile Section on the Left -->
         <aside class="profile-section">
-            <img src="profil.jpg" alt="Czégény Kornél profilkép" class="large-profile-img">
+            <img src="profil.jpg" alt="Kornél Czégény profile picture" class="large-profile-img">
             <nav class="site-nav">
-                <a href="#projects">Projektek</a>
-                <a href="#about">Rólam</a>
-                <a href="#contact">Elérhetőségek</a>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#languages">Programming Languages</a>
+                <a href="#contact">Contact</a>
             </nav>
         </aside>
 
         <!-- Main Content on the Right -->
         <main class="main-content">
+            <!-- About Me Section at the Top -->
+            <section id="about" class="about-section">
+                <h2>About Me</h2>
+                <p>I am a third-year Computer Engineering student at the Budapest University of Technology and Economics. During my studies, I gained significant experience in C, C++, and Java, and I learned Python on my own. I am eager to apply my knowledge, gain experience, and find a long-term position in a company that I find appealing.</p>
+            </section>
+
             <section id="projects" class="projects-section">
-                <h2>Projektek</h2>
+                <h2>Projects</h2>
                 <div class="projects-grid">
                     <article class="project-card">
                         <h3>PacMan (Java)</h3>
-                        <p>Harmadik féléves projektem a klasszikus PacMan játék elkészítése. A pálya, szellemek, PacMan grafikája adott volt, de a játékmenet lefejlesztését én csináltam.</p>
+                        <p>My third semester project involved creating the classic PacMan game. The map, ghosts, and PacMan graphics were provided, but I developed the gameplay.</p>
                     </article>
                     <article class="project-card">
-                        <h3>Ruharaktár (C, C++, Java)</h3>
-                        <p>Ezt a projektemet 3 féléven keresztül újra és újra lefejlesztettem 0-ról, 3 különböző nyelven. A program célja egy adatbázis kezelése OO módon, mely a ruharaktárban tárolt jelmezekkel hajt végre különböző műveleteket. A programot a közeljövőben implementációra kész állapotban szeretném implementálni egy művészeti iskolában.</p>
+                        <h3>Clothing Warehouse (C, C++, Java)</h3>
+                        <p>This project was developed from scratch over three semesters in three different languages. The program aims to manage a database in an object-oriented way, handling various operations related to the costumes stored in the clothing warehouse. I plan to implement this program in a performing arts school soon.</p>
                     </article>
                     <article class="project-card">
                         <h3>Spaceship (Java)</h3>
-                        <p>Szintén harmadik féléves projektem egy egyszerű félkész állapotú Spaceship játék tesztelése, majd javítása, kiegészítése.</p>
+                        <p>Another third semester project, which involved testing, debugging, and enhancing a simple, partially completed Spaceship game.</p>
                     </article>
                 </div>
             </section>
 
-            <section id="about" class="about-section">
-                <h2>Rólam</h2>
-                <p>Harmadéves mérnökinformatikus egyetemista vagyok a BME-n. Tanulmányaim során C, C++ és Java nyelven szereztem jelentős tapasztalatot, Python nyelven autodidakta módon tanultam meg programozni. Szeretném tudásomat minél előbb kamatoztatni, tapasztalatot szerezni és egy szimpatikus munkahelyen hosszú távon elhelyezkedni.</p>
+            <!-- New Programming Languages Section -->
+            <section id="languages" class="languages-section">
+                <h2>Programming Languages</h2>
+                <div class="languages-grid">
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=40670&format=png&color=000000" alt="C Logo" class="language-logo">
+                        <p>C</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000" alt="C++ Logo" class="language-logo">
+                        <p>C++</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=45490&format=png&color=000000" alt="C# Logo" class="language-logo">
+                        <p>C#</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=lTKW3iI3wIT0&format=png&color=000000" alt="Java Logo" class="language-logo">
+                        <p>Java</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python Logo" class="language-logo">
+                        <p>Python</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML Logo" class="language-logo">
+                        <p>HTML</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS Logo" class="language-logo">
+                        <p>CSS</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" alt="JS Logo" class="language-logo">
+                        <p>JS<br>Node.js</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=MBA5vPE4dGz2&format=png&color=000000" alt="SQL Logo" class="language-logo">
+                        <p>MySQL<br>Oracle</p>
+                    </div>
+                    <div class="language-card">
+                        <img src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" alt="Excel Logo" class="language-logo">
+                        <p>Excel<br>VBA</p>
+                    </div>
+                    
+                </div>
             </section>
+            
 
             <section id="contact" class="contact-section">
-                <h2>Elérhetőségek</h2>
+                <h2>Contact</h2>
                 <ul class="contact-info">
-                    <li>Telefonszám: +36307033370</li>
+                    <li>Phone: +36307033370</li>
                     <li>Email: <a href="mailto:czegeny03@gmail.com">czegeny03@gmail.com</a></li>
                     <li>Facebook: <a href="https://www.facebook.com/kornel.czegeny" target="_blank">facebook.com/kornel.czegeny</a></li>
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny-b27b32263/" target="_blank">linkedin.com/in/korn%C3%A9l-cz%C3%A9g%C3%A9ny</a></li>
@@ -60,7 +111,7 @@
     </div>
 
     <footer class="site-footer">
-        <p>&copy; 2024 Czégény Kornél. Minden jog fenntartva.</p>
+        <p>&copy; 2024 Kornél Czégény. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>

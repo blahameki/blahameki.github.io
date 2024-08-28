@@ -117,3 +117,37 @@ body {
         border-left: none;
     }
 }
+
+.languages-section {
+    margin-bottom: 2rem;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Updated to fit 5 in a row */
+    gap: 2rem;
+    justify-items: center; /* Centers the content of each grid item */
+}
+
+.language-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border: 0px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 100px; /* Adjust width to fit 5 in a row */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.language-logo {
+    width: 100px; /* Smaller size to fit in a 5x row layout */
+    height: 100px; /* Keep the logos square */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
